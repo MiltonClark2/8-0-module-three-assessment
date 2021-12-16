@@ -8,7 +8,7 @@ class People extends Component {
         super()
         this.state = {
             people: [],
-            currentPerson: null
+            userInput: ""
         };
     };
 
@@ -27,6 +27,41 @@ class People extends Component {
         this.fetchPeople();
     };
 
+
+    handleOnChange = (event) => {
+        this.setState({
+            userInput: event.target.value
+        })
+
+    }
+
+    handleOnSubmit = (e) => {
+        e.preventDefault();
+        
+
+    }
+
+    render(){
+        return(
+            <div className="people">
+                <h1>
+                    Search for a Person
+                </h1>
+                <form>
+                    <input 
+                        id="user-input"
+                        type="text"
+                        placeholder="Find Your Person"
+                        onChange={this.handleOnChange}
+                    />
+                    <button onSubmit={this.handleOnSubmit}>
+                        Submit
+                    </button>
+                </form>
+
+            </div>
+        )
+    }
 };
 
 export default People;

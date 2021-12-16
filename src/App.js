@@ -4,6 +4,7 @@ import "./App.css";
 import Home  from './components/Home';
 import Locations from "./components/Locations";
 import Movies from "./components/Movies";
+import People from "./components/People";
 
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
             <Locations />
           </Route>
           
-          {/* <Route path="/people" component={People} /> */}
+          <Route path="/people" >
+            <People />
+          </Route>
         </Switch>
     </Router>
     
