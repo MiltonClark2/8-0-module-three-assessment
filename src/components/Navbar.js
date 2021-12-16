@@ -11,8 +11,8 @@ class Navbar extends Component{
                         <img src="./assets/movie-logo" />
                     </Link>
                     <Link to="/movies">Movies</Link>
-                    <Link to="people">People</Link>
-                    <Link to="locations">Locations</Link>
+                    <Link to="/people">People</Link>
+                    <Link to="/locations">Locations</Link>
                 </nav>
             </div>
             
